@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительно-монтажные работы | РС Системс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
+        }
+        header, footer {
+            background-color: #2E3A59;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        nav {
+            width: 250px;
+            margin-right: 40px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 15px;
+        }
+        nav ul li a {
+            color: #2E3A59;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #4B5D7A;
+            text-decoration: underline;
+        }
+        article {
+            flex: 1;
+        }
+        h1, h2 {
+            color: #2E3A59;
+        }
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .menu-toggle {
+            display: none;
+            background: #2E3A59;
+            color: white;
+            padding: 10px;
+            border: none;
+            font-size: 20px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                padding: 10px;
+            }
+            nav {
+                width: 100%;
+                margin: 0 0 20px 0;
+                display: none;
+            }
+            nav.show {
+                display: block;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header data-aos="fade-down">
+    <img src="images/banner.jpg" alt="Баннер" style="width: 50%; height: auto; display: block;">
+    <h1>Строительная компания "РС Системс"</h1>
+</header>
+
+<!-- Кнопка меню на мобильных -->
+<button class="menu-toggle" onclick="toggleMenu()">Меню услуг</button>
+
+<main>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Строительно-монтажные работы</a></li>
+            <li><a href="#">Проектирование</a></li>
+            <li><a href="#">Ремонт коммерческих помещений</a></li>
+            <li><a href="#">Реконструкция зданий</a></li>
+            <li><a href="#">Инженерные сети</a></li>
+            <li><a href="#">Услуги генподряда</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1 data-aos="fade-up">Строительно-монтажные работы</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Компания "РС Системс" предлагает полный комплекс строительно-монтажных работ на объектах любого уровня сложности. Мы выполняем работы на жилых, коммерческих и промышленных объектах в соответствии с действующими нормами и стандартами.</p>
+
+        <h2 data-aos="fade-right">Виды выполняемых работ:</h2>
+        <ul data-aos="fade-up" data-aos-delay="200">
+            <li>Строительство жилых и нежилых зданий под ключ</li>
+            <li>Монтаж несущих конструкций</li>
+            <li>Устройство кровли и фасадов</li>
+            <li>Производство электромонтажных работ</li>
+            <li>Строительство прочих инженерных сооружений, не включенных в другие группировки</li>
+            <li>Производство санитарно-технических работ, монтаж отопительных систем и систем кондиционирования воздуха</li>
+        </ul>
+        <h2 data-aos="fade-right">Преимущества работы с нами:</h2>
+        <ul data-aos="fade-up" data-aos-delay="300">
+            <li>Опыт более 10 лет в строительной отрасли</li>
+            <li>Высококвалифицированные специалисты</li>
+            <li>Современные технологии и материалы</li>
+            <li>Точная сдача объектов в срок</li>
+            <li>Индивидуальный подход к каждому проекту</li>
+        </ul>
+
+        <h2 data-aos="fade-right">Контактная информация</h2>
+        <p data-aos="fade-up" data-aos-delay="400"><strong>Адрес:</strong> г. Москва, ул. Строительная, д. 10</p>
+        <p data-aos="fade-up" data-aos-delay="450"><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+        <p data-aos="fade-up" data-aos-delay="500"><strong>Email:</strong> info@rcsystems.ru</p>
+    </article>
+</main>
+
+<footer data-aos="fade-up">
+    <p>© 2025 Строительная компания "РС Системс". Все права защищены.</p>
+</footer>
+
+<!-- Скрипт для гамбургер-меню -->
+<script>
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('show');
+}
+</script>
+
+<!-- Подключение библиотеки анимации AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+
+</body>
+</html>
